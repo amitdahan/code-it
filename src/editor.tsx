@@ -64,6 +64,7 @@ const Editor: typeof ReactMonacoEditor = props => {
       <style jsx>{`
         .wrapper {
           flex: 1;
+          background-color: #1e1e1e;
         }
       `}</style>
     </div>
