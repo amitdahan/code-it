@@ -13,7 +13,7 @@ const Home: FC = () => (
     <Head>
       <title>Code It!</title>
     </Head>
-    <Editor value={sampleCode} height={300} width={300} language="javascript" />
+    <Editor value={sampleCode} height={300} width={600} language="javascript" />
   </div>
 );
 

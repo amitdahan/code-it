@@ -5,7 +5,11 @@ const withFonts = require('next-fonts');
 module.exports = withFonts(
   withCSS({
     webpack(config) {
-      config.plugins.push(new MonacoWebpackPlugin());
+      config.plugins.push(
+        new MonacoWebpackPlugin({
+          filename: 'static/[name].worker.js'
+        })
+      );
 
       return config;
     }
