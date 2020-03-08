@@ -1,18 +1,28 @@
 import { FC } from 'react';
 import Head from 'next/head';
 import Editor from '../editor';
+// import Pusher from 'pusher-js';
 
 const sampleCode = `function foo(): 'bar' | 'baz' {
   return Math.random() > 0.5 ? 'bar' : 'baz';
 }
 `;
 
+const pushToPusher = async () => {
+  await fetch('/api/set', { method: 'POST' });
+};
+
 const Home: FC = () => (
   <div className="root">
     <Head>
       <title>Code It!</title>
     </Head>
-    <Editor value={sampleCode} language="typescript" theme="vs-dark" />
+    <Editor
+      value={sampleCode}
+      language="typescript"
+      theme="vs-dark"
+      onChange={pushToPusher}
+    />
 
     <style jsx>{`
       .root {
