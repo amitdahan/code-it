@@ -14,10 +14,7 @@ const Editor: typeof ReactMonacoEditor = props => {
   const containerRef = useRef<HTMLElement>();
 
   const resizeHandler = useCallback(
-    (width, height) => {
-      console.log('resized!', width, height);
-      editor?.layout({ width, height });
-    },
+    (width, height) => editor?.layout({ width, height }),
     [editor]
   );
 
