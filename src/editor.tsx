@@ -4,10 +4,10 @@ import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api';
 import useResizeObserver from './useResizeObserver';
 
 const ReactMonacoEditor = dynamic(() => import('react-monaco-editor'), {
-  ssr: false
+  ssr: false,
 });
 
-const Editor: typeof ReactMonacoEditor = props => {
+const Editor: typeof ReactMonacoEditor = (props) => {
   const [editor, setEditor] = useState<
     monacoEditor.editor.IStandaloneCodeEditor | undefined
   >();
@@ -21,7 +21,10 @@ const Editor: typeof ReactMonacoEditor = props => {
   useResizeObserver(resizeHandler, containerRef);
 
   return (
-    <div className="wrapper" ref={element => (containerRef.current = element!)}>
+    <div
+      className="wrapper"
+      ref={(element) => (containerRef.current = element!)}
+    >
       <ReactMonacoEditor editorDidMount={setEditor} {...props} />
       <style jsx>{`
         .wrapper {
