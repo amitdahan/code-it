@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "PUSHER_SECRET": "@pusher-secret"
+    }
+  }
+}

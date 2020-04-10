@@ -11,26 +11,31 @@
     "prebuild": "yarn test"
   },
   "dependencies": {
+    "lodash": "4.17.15",
     "monaco-editor": "0.20.0",
-    "next": "9.2.2",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
-    "react-monaco-editor": "0.34.0"
+    "next": "9.3.4",
+    "pusher": "3.0.1",
+    "pusher-js": "5.1.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-monaco-editor": "0.36.0"
   },
   "devDependencies": {
-    "@types/node": "13.9.0",
-    "@types/react": "16.9.23",
-    "@typescript-eslint/eslint-plugin": "2.22.0",
-    "@typescript-eslint/parser": "2.22.0",
+    "@types/lodash": "4.14.149",
+    "@types/node": "13.11.1",
+    "@types/pusher-js": "4.2.2",
+    "@types/react": "16.9.34",
+    "@typescript-eslint/eslint-plugin": "2.27.0",
+    "@typescript-eslint/parser": "2.27.0",
     "@zeit/next-css": "1.0.1",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.0",
+    "eslint-config-prettier": "6.10.1",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.19.0",
-    "eslint-plugin-react-hooks": "2.5.0",
+    "eslint-plugin-react-hooks": "3.0.0",
     "monaco-editor-webpack-plugin": "1.9.0",
     "next-fonts": "1.0.3",
-    "prettier": "1.19.1",
+    "prettier": "2.0.4",
     "typescript": "3.8.3"
   }
 }
