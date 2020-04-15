@@ -13,7 +13,7 @@
   "dependencies": {
     "lodash": "4.17.15",
     "monaco-editor": "0.20.0",
-    "next": "9.3.4",
+    "next": "9.3.5",
     "pusher": "3.0.1",
     "pusher-js": "5.1.1",
     "react": "16.13.1",
