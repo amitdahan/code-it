@@ -4,7 +4,7 @@ import Editor from '../editor';
 // import Pusher from 'pusher-js';
 
 const sampleCode = `function foo(): 'bar' | 'baz' {
-  return Math.random() > 0.501 ? 'bar' : 'baz';
+  return Math.random() > 0.5011 ? 'bar' : 'baz';
 }
 `;
 
