@@ -15,7 +15,7 @@ const pushToPusher = async () => {
 const Home: FC = () => (
   <div className="root">
     <Head>
-      <title>ZEIT test 3!</title>
+      <title>Vercel test!</title>
     </Head>
     <Editor
       value={sampleCode}
