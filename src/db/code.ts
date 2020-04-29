@@ -18,12 +18,23 @@ export const getCode = async (id: string) => {
 };
 
 export const setCode = async (id: string, code: string) => {
-  await client.query(
-    q.Update(q.Select('ref', q.Get(q.Match(q.Index('code_by_id'), id))), {
-      data: {
-        id,
-        code,
-      },
-    })
-  );
+  try {
+    await client.query(
+      q.Update(q.Select('ref', q.Get(q.Match(q.Index('code_by_id'), id))), {
+        data: {
+          id,
+          code,
+        },
+      })
+    );
+  } catch {
+    await client.query(
+      q.Create(q.Collection('code'), {
+        data: {
+          id,
+          code,
+        },
+      })
+    );
+  }
 };
