@@ -22,11 +22,9 @@ const usePusher = <E extends PusherEvent>(
 
   useEffect(() => {
     const sub = pusher.subscribe(channel);
-    sub.bind(event, handler);
+    sub.bind(event, (data: PusherEventMap[E]) => handlerRef.current?.(data));
 
-    return () => {
-      sub.unbind(event);
-    };
+    return () => void sub.unbind(event);
   }, [channel, handler, event]);
 };
 
