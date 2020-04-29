@@ -2,7 +2,7 @@ import { NextApiHandler } from 'next';
 import { getCode } from '../../../db/code';
 
 const getCodeHandler: NextApiHandler = async (req, res) => {
-  if (req.method !== 'POST') {
+  if (req.method !== 'GET') {
     return res.status(500).send('Bad method');
   }
 
