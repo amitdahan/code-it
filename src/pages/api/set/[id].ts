@@ -13,14 +13,14 @@ const setCodeHandler: NextApiHandler = async (req, res) => {
     return res.status(500).send('Bad param');
   }
 
-  const code = req.body;
+  const { code, socketId } = req.body;
 
-  if (typeof code !== 'string') {
+  if (typeof code !== 'string' || typeof socketId !== 'string') {
     return res.status(500).send('Bad body');
   }
 
   await setCode(id, code);
-  notifyCodeChanged(id, code);
+  void notifyCodeChanged(id, code, socketId);
 
   res.status(200).end();
 };

@@ -8,9 +8,14 @@ const pusher = new Pusher({
   useTLS: true,
 });
 
-export const trigger = (channel: string, event: string, data: unknown) =>
+export const trigger = (
+  channel: string,
+  event: string,
+  data: unknown,
+  socketId: string
+) =>
   new Promise((resolve, reject) =>
-    pusher.trigger(channel, event, data, (err, req, res) =>
+    pusher.trigger(channel, event, data, socketId, (err, req, res) =>
       err ? reject(err) : resolve(res)
     )
   );

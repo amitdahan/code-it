@@ -1,9 +1,5 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Pusher from 'pusher-js';
-
-const pusher = new Pusher('804b22b07d6fb336eb9b', {
-  cluster: 'eu',
-});
 
 type PusherEvent = 'change';
 
@@ -17,15 +13,32 @@ const usePusher = <E extends PusherEvent>(
   handler: (data: PusherEventMap[E]) => void
 ) => {
   const handlerRef = useRef<typeof handler>();
-
   handlerRef.current = handler;
+
+  const pusher = useMemo(
+    () =>
+      new Pusher('804b22b07d6fb336eb9b', {
+        cluster: 'eu',
+      }),
+    []
+  );
+
+  const [socketId, setSocketId] = useState<string>();
+
+  useEffect(() => {
+    pusher.connection.bind('connected', () =>
+      setSocketId(pusher.connection.socket_id)
+    );
+  }, [setSocketId]);
 
   useEffect(() => {
     const sub = pusher.subscribe(channel);
     sub.bind(event, (data: PusherEventMap[E]) => handlerRef.current?.(data));
 
     return () => void sub.unbind(event);
-  }, [channel, handler, event]);
+  }, [pusher, channel, handler, event]);
+
+  return socketId;
 };
 
 export default usePusher;
