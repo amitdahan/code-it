@@ -4,9 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import { apiUrl } from '../utils';
 import Head from 'next/head';
 import Editor from '../editor';
-import useSWR, { mutate, trigger } from 'swr';
-import { useCallback, useEffect, useMemo } from 'react';
-import Pusher from 'pusher-js';
+import useCode from '../useCode';
 
 interface ServerSideProps {
   initialCode: string;
@@ -16,56 +14,6 @@ const useCurrentId = () => {
   const router = useRouter();
   const { id } = router.query;
   return id as string;
-};
-
-const usePusher = (
-  channel: string,
-  event: string,
-  handler: (data: any) => void
-) => {
-  const pusher = useMemo(
-    () =>
-      new Pusher('804b22b07d6fb336eb9b', {
-        cluster: 'eu',
-      }),
-    []
-  );
-
-  useEffect(() => {
-    const sub = pusher.subscribe(channel);
-    sub.bind(event, handler);
-
-    return () => {
-      sub.unbind(event);
-    };
-  }, [pusher, channel, handler, event]);
-};
-
-const useCode = (id: string, initialData: string) => {
-  const { data: code } = useSWR(`/api/get/${id}`, {
-    initialData,
-    fetcher: (url) => fetch(url).then((res) => res.text()),
-  });
-
-  const pusherHandler = useCallback(
-    (code: string) => mutate(`/api/get/${id}`, code),
-    [id]
-  );
-
-  usePusher(`code-${id}`, 'change', pusherHandler);
-
-  const setCode = useCallback(
-    async (code: string) => {
-      await fetch(`/api/set/${id}`, {
-        method: 'post',
-        body: code,
-      });
-      trigger(`/api/get/${id}`);
-    },
-    [id]
-  );
-
-  return useMemo(() => ({ code, setCode }), [code, setCode]);
 };
 
 const InfoPage: NextPage<ServerSideProps> = ({ initialCode }) => {
@@ -78,9 +26,9 @@ const InfoPage: NextPage<ServerSideProps> = ({ initialCode }) => {
         <title>Code It!</title>
       </Head>
       <Editor
-        value={code}
         language="typescript"
         theme="vs-dark"
+        value={code}
         onChange={setCode}
       />
 
