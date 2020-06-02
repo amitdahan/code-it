@@ -3083,10 +3083,10 @@ fastparse@^1.1.2:
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
   integrity sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==
 
-faunadb@2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/faunadb/-/faunadb-2.14.1.tgz#62e06992c8fcece560109aa2e37405a522c6e6e6"
-  integrity sha512-dP2H0ZatKsyVLcmNk5xT4tIiAULhB0fD3bpneWsEpXRwq0T5uw5R3NDX/OU3gpIkSgh5ZyzrUVCckxGyHM2ntw==
+faunadb@2.14.2:
+  version "2.14.2"
+  resolved "https://registry.yarnpkg.com/faunadb/-/faunadb-2.14.2.tgz#345720fceea96ab76fa7f0e0f2d282dca0857115"
+  integrity sha512-W7IjQJW2GyFQom6vNidoLHQGtsEd0TiTwGxIKgyKprkuaIOSzbQySPsh6fR1l2K7i8MGLH/EObfjtJnmIX+hkw==
   dependencies:
     base64-js "^1.2.0"
     btoa-lite "^1.0.0"
