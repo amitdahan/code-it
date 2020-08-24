@@ -1102,14 +1102,6 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-"@types/react@^16.x":
-  version "16.9.34"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.34.tgz#f7d5e331c468f53affed17a8a4d488cd44ea9349"
-  integrity sha512-8AJlYMOfPe1KGLKyHpflCg5z46n0b5DbRfqDksxBLBTUpB75ypDBAO9eCUcjNwE6LCUslwTz00yyG/X9gaVtow==
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
 "@types/request@^2.47.1":
   version "2.48.4"
   resolved "https://registry.yarnpkg.com/@types/request/-/request-2.48.4.tgz#df3d43d7b9ed3550feaa1286c6eabf0738e6cf7e"
@@ -2394,11 +2386,6 @@ cssnano-simple@1.0.7:
   dependencies:
     cssnano-preset-simple "1.1.7"
     postcss "^7.0.32"
-
-csstype@^2.2.0:
-  version "2.6.10"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
-  integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
 
 csstype@^3.0.2:
   version "3.0.2"
@@ -5119,12 +5106,11 @@ react-is@16.13.1, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-monaco-editor@0.39.1:
-  version "0.39.1"
-  resolved "https://registry.yarnpkg.com/react-monaco-editor/-/react-monaco-editor-0.39.1.tgz#2be0edf38f62eab127214c4d930f3d3ae369bfee"
-  integrity sha512-D2GKJlPxEIwkad9n1L7K/J3rLZ/UlMItS44YPO4cGQCcUJyKdwJkhOtk7q8gCqVd2uu7jyfyb8U34iSe+z9Aeg==
+react-monaco-editor@0.40.0:
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/react-monaco-editor/-/react-monaco-editor-0.40.0.tgz#f1b021b32952cfc63a4bf2661fd20f61b2b8309f"
+  integrity sha512-IG322vOwKc/yjhn91xbqHONyAVxjv5L0YOUBU+hDwfswlglm/sGsqGhK9n1lD5d3l3kegMO/ZeZaMHC2LGgNRw==
   dependencies:
-    "@types/react" "^16.x"
     monaco-editor "*"
     prop-types "^15.7.2"
 
