@@ -2,9 +2,10 @@ const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
 
-const withMonaco = () =>
+const withMonaco = (nextConfig) =>
   withFonts(
     withCSS({
+      ...nextConfig,
       webpack(config) {
         config.plugins.push(
           new MonacoWebpackPlugin({
@@ -16,4 +17,14 @@ const withMonaco = () =>
       }
     })
   );
-module.exports = withMonaco();
+module.exports = withMonaco({
+  redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/1337',
+        permanent: true,
+      }
+    ]
+  }
+});
