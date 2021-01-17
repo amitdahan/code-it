@@ -29,7 +29,7 @@ const usePusher = <E extends PusherEvent>(
     pusher.connection.bind('connected', () =>
       setSocketId(pusher.connection.socket_id)
     );
-  }, [setSocketId]);
+  }, [setSocketId, pusher.connection]);
 
   useEffect(() => {
     const sub = pusher.subscribe(channel);
