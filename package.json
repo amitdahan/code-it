@@ -11,7 +11,7 @@
     "prebuild": "yarn test"
   },
   "dependencies": {
-    "faunadb": "4.0.3",
+    "faunadb": "4.1.0",
     "isomorphic-unfetch": "3.1.0",
     "lodash": "4.17.20",
     "monaco-editor": "0.20.0",
