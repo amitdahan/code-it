@@ -20,7 +20,7 @@
     "pusher-js": "7.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-monaco-editor": "0.42.0",
+    "react-monaco-editor": "0.43.0",
     "swr": "0.5.3"
   },
   "devDependencies": {
