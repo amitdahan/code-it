@@ -21,7 +21,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-monaco-editor": "0.43.0",
-    "swr": "0.5.3"
+    "swr": "0.5.4"
   },
   "devDependencies": {
     "@types/lodash": "4.14.168",
