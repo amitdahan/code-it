@@ -2645,10 +2645,10 @@ pusher-js@7.0.3:
   dependencies:
     tweetnacl "^1.0.3"
 
-pusher@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/pusher/-/pusher-4.0.2.tgz#cca2819572ca13b461dc3f18d70946dafed2b1d2"
-  integrity sha512-11kmKP7WZFKLs11XX14Ma+/TJg8TdW3cY/FLPkSQBFNOkXnFEdLEM6YPprzQNPIhQ05KjLS+1XR33AvuveZBRA==
+pusher@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/pusher/-/pusher-5.0.0.tgz#3dc39ff527637a4b4597652357b0ec562514c8e6"
+  integrity sha512-YaSZHkukytHR9+lklJp4yefwfR4685kfS6pqrSDUxPj45Ga29lIgyN7Jcnsz+bN5WKwXaf2+4c/x/j3pzWIAkw==
   dependencies:
     abort-controller "^3.0.0"
     is-base64 "^1.1.0"
