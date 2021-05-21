@@ -24,7 +24,7 @@
     "swr": "0.5.5"
   },
   "devDependencies": {
-    "@types/lodash": "4.14.168",
+    "@types/lodash": "4.14.170",
     "@types/node": "13.13.48",
     "@types/pusher-js": "4.2.2",
     "@types/react": "17.0.3",
