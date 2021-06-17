@@ -2096,10 +2096,10 @@ minimist@^1.2.0, minimist@^1.2.5:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
-monaco-editor-webpack-plugin@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/monaco-editor-webpack-plugin/-/monaco-editor-webpack-plugin-3.0.1.tgz#b9bf93314eb2708907c232cfbf359622e7a6d98a"
-  integrity sha512-Hym4HqWgIpyoi9G0spln/b/7rkDKfYwIOrNzo1fHHMc+MLYSwD1JXHwKSDS77X27ZHfVJsEXbMZYdGhSYuVF0w==
+monaco-editor-webpack-plugin@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/monaco-editor-webpack-plugin/-/monaco-editor-webpack-plugin-4.0.0.tgz#95be3f48f4220999b909266a9997727f0deab947"
+  integrity sha512-4BT9XDRQXraMQjxEUjR+uuubRe3RIPkvVoGw8zwWG++s7wq6TAiXaSOMdkdS9TrjCREgSnygCOlVzY6MS8RPuA==
   dependencies:
     loader-utils "^2.0.0"
 
